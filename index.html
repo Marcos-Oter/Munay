@@ -1,16 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Munay</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MUNAY — Tu energía también se viste.">
+  <title>MUNAY | Tu energía también se viste</title>
+  
+  <link rel="stylesheet" href="css/munay.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://kit.fontawesome.com/58353cef79.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    
-    <script src="assets/js/main.js" type="module" defer></script>
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>ENVÍOS A TODO EL PAÍS</span><i>✦</i><span>TODOS LOS MEDIOS DE PAGO</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="brand brand--header" href="#" aria-label="MUNAY inicio">
+        <span class="brand__name">MUNAY</span>
+        <span class="brand__tagline">TU ENERGÍA TAMBIÉN SE VISTE</span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a class="is-active" href="#inicio">Inicio</a>
+        <a href="#novedades">Novedades</a>
+        <a href="#camisas">Camisas</a>
+        <a href="#remeras">Remeras</a>
+        <a href="#pantalones">Pantalones</a>
+        <a href="#bermudas">Bermudas</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Buscar"><span class="ico ico-search"></span></button>
+        <button class="icon-btn" aria-label="Cuenta"><span class="ico ico-user"></span></button>
+        <button class="icon-btn cart-btn" aria-label="Carrito"><span class="ico ico-bag"></span><b id="cartCount">0</b></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <img src="assets/banner.png" alt="" class="hero__image">
+      <div class="hero__content">
+        <div class="hero__logo">MUNAY</div>
+        <div class="hero__rule"><span></span></div>
+        <div class="hero__tagline">TU ENERGÍA TAMBIÉN SE VISTE</div>
+        <h1>NUEVA COLECCIÓN</h1>
+        <a class="btn btn--gold" href="#novedades">VER COLECCIÓN</a>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Beneficios">
+      <div class="container benefits__grid">
+        <article><span class="benefit-icon truck"></span><div><strong>ENVÍOS A TODO EL PAÍS</strong><small>Todos los medios disponibles</small></div></article>
+        <article><span class="benefit-icon card"></span><div><strong>TODOS LOS MEDIOS DE PAGO</strong><small>Efectivo, transferencia, tarjetas y más</small></div></article>
+        <article><span class="benefit-icon shield"></span><div><strong>COMPRA 100% SEGURA</strong><small>Protegemos tus datos</small></div></article>
+        <article><span class="benefit-icon chat"></span><div><strong>ATENCIÓN PERSONALIZADA</strong><small>Escribinos por WhatsApp</small></div></article>
+      </div>
+    </section>
+
+    <section class="products" id="novedades">
+      <div class="container">
+        <header class="section-head">
+          <h2>NOVEDADES</h2>
+          <div class="filters" role="tablist">
+            <button class="active" data-filter="todos">Ver todo</button>
+            <button data-filter="todos">Vestidos</button>
+            <button data-filter="camisas">Camisas</button>
+            <button data-filter="remeras">Remeras</button>
+            <button data-filter="pantalones">Pantalones</button>
+            <button data-filter="bermudas">Bermudas</button>
+          </div>
+        </header>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="camisas">
+            <div class="product-card__media"><img src="assets/card-alma2.png" alt="Camisa Alma"><span>NUEVO</span></div>
+            <div class="product-card__body">
+              <h3>ALMA</h3><p>Camisa de gasa.<br>Oversize. Adaptable a<br>todo tipo de cuerpo.</p>
+              <div class="product-card__bottom"><strong>$38.000</strong><button class="more" data-add="ALMA">VER MÁS</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="camisas">
+            <div class="product-card__media"><img src="assets/card-alice2.png" alt="Camisa Alice"><span>NUEVO</span></div>
+            <div class="product-card__body">
+              <h3>ALICE</h3><p>Camisa de gamuza con bordado.<br>Talles: M y L<br>Colores: Chocolate claro<br>y chocolate oscuro.</p>
+              <div class="product-card__bottom"><strong>$48.000</strong><button class="more" data-add="ALICE">VER MÁS</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="pantalones">
+            <div class="product-card__media"><img src="assets/card-vintage2.png" alt="Pantalón Vintage"><span>NUEVO</span></div>
+            <div class="product-card__body">
+              <h3>VINTAGE</h3><p>Pantalón de gabardina.<br>Talles: M (36-38) y L (40-42)</p>
+              <div class="product-card__bottom"><strong>$40.000</strong><button class="more" data-add="VINTAGE">VER MÁS</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="remeras">
+            <div class="product-card__media"><img src="assets/card-basicas2.png" alt="Remeras Básicas"><span>NUEVO</span></div>
+            <div class="product-card__body">
+              <h3>BÁSICAS</h3><p>Remeras básicas.<br>Talle único.<br>Combinan con todo.</p>
+              <div class="product-card__bottom"><strong>$16.000</strong><button class="more" data-add="BÁSICAS">VER MÁS</button></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="bermudas">
+            <div class="product-card__media"><img src="assets/card-ashley2.png" alt="Bermuda Ashley"><span>NUEVO</span></div>
+            <div class="product-card__body">
+              <h3>ASHLEY</h3><p>Bermuda tiro medio con bolsillos.<br>Tela: Lino.<br>Talles: S, M, L</p>
+              <div class="product-card__bottom"><strong>$30.000</strong><button class="more" data-add="ASHLEY">VER MÁS</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection-band" id="colecciones">
+      <div class="container collection-band__inner">
+        <div class="collection-copy">
+          <span class="eyebrow">MUNAY</span>
+          <h2>TONOS QUE INSPIRAN</h2>
+          <p>Prendas atemporales, tonos neutros y detalles que enamoran.</p>
+          <a href="#novedades" class="btn btn--outline">VER TODA LA COLECCIÓN</a>
+        </div>
+        <div class="collection-image"><img src="assets/collections-reference.jpg" alt="Colección MUNAY"></div>
+      </div>
+    </section>
+
+    <section class="about" id="nosotros">
+      <div class="container about__inner">
+        <div class="about__copy">
+          <div class="mini-mark">✦</div>
+          <h2>SOBRE MUNAY</h2>
+          <p>Munay significa “amar” en quechua.<br>Cada prenda está pensada para acompañarte<br>en tu día a día con comodidad, estilo<br>y la mejor calidad.</p>
+          <a href="#contacto">CONOCÉ MÁS <span>✦</span></a>
+        </div>
+        <div class="about__image"><img src="assets/about.png" alt="Interior y colección MUNAY"></div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-wa" href="#" aria-label="WhatsApp">⌕</a>
+
+  <footer class="site-footer" id="contacto">
+    <div class="container footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo">MUNAY</div>
+        <p>Elegancia, calidad y estilo<br>en cada prenda.</p>
+        <div class="socials"><a href="https://www.instagram.com/munayesamor" aria-label="Instagram" class="fa-brands fa-instagram"></a><a href="#" aria-label="Facebook" class="fa-brands fa-facebook"></a><a href="#" aria-label="TikTok" class="fa-brands fa-tiktok"></a></div>
+      </div>
+      <div class="footer-col"><h3>INFORMACIÓN</h3><a href="#">Envíos</a><a href="#">Cambios y devoluciones</a><a href="#">Guía de talles</a><a href="#">Preguntas frecuentes</a></div>
+      <div class="footer-col"><h3>AYUDA</h3><a href="#">Medios de pago</a><a href="#">Términos y condiciones</a><a href="#">Política de privacidad</a></div>
+      <div class="footer-col footer-contact"><h3>CONTACTO</h3><p><span class="fa-brands fa-whatsapp"></span> 11 1234 5678</p><p><span>✉</span> hola@munay.com.ar</p><p><span>⌖</span> Buenos Aires, Argentina</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 MUNAY. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="js/munay.js"></script>
 </body>
 </html>
