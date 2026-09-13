@@ -47,7 +47,7 @@ a{text-decoration:none;color:inherit}
 .brand__tagline{font-size:7px;letter-spacing:.27em;margin-top:8px;color:#b98b4a}
 .main-nav{display:flex;align-items:center;justify-content:center;gap:34px}
 .main-nav a{color:var(--new-brown-font); font-size:10px;font-weight:500;letter-spacing:.075em;text-transform:uppercase;padding:28px 0 12px;border-bottom:1px solid transparent}
-.main-nav a:hover{border-bottom-color:var(--gold);color:#ffffff88}
+.main-nav a:hover{border-bottom-color:var(--gold);color:#11111188}
 .main-nav a.is-active{border-bottom-color:var(--gold);color:var(--new-brown-font)}
 .header-actions{display:flex;justify-content:flex-end;gap:22px}
 .icon-btn{position:relative;border:0;background:none;color:var(--new-brown-font);width:23px;height:25px;padding:0}
@@ -97,11 +97,27 @@ a{text-decoration:none;color:inherit}
     color: #d59f5d;
     transform: translateX(-10%);
 }
+.munay-line2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+    color: #d59f5d;;
+}
 .munay-line span {
     width: 150px;
     height: 1.25px;
     
 }
+.munay-line2 span {
+    width: 150px;
+    height: 1.25px;
+    
+}
+
 
 .munay-line .span-left {
   background: linear-gradient(270deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
@@ -109,6 +125,14 @@ a{text-decoration:none;color:inherit}
 
 .munay-line .span-right {
     background: linear-gradient(90deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
+}
+
+.munay-line2 .span-left {
+  background: linear-gradient(270deg,var(--brown-deep) 71%, rgba(46, 46, 39, 0.31) 100%);
+}
+
+.munay-line2 .span-right {
+    background: linear-gradient(90deg,var(--brown-deep), rgba(46, 46, 39, 0.31) 100%);
 }
 
 .munay-line b {
@@ -119,7 +143,15 @@ a{text-decoration:none;color:inherit}
     color: #d59f5d;
 }
 
-.hero__logo{font-family: "Bodoni Moda",Georgia,serif; font-size:101px; line-height:.92;color:#d59f5d;text-shadow: -4px 4px 15px rgba(2, 2, 7, 0.753)}
+.munay-line2 h2 {
+    font-size: 13px;
+    font-weight: 900;
+    font-family: "Bodoni Moda",Georgia,serif;
+
+    color: var(--brown-deep);
+}
+
+.hero__logo{font-family: "Bodoni Moda",Georgia,serif; font-size:101px; line-height:.92;color:#f7b96d;text-shadow: -4px 4px 15px rgba(2, 2, 7, 0.753)}
 .hero__rule{width:115px;height:1px;background:#b68b4b;margin:8px auto 8px;position:relative}
 .hero__rule:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold);right:-15px;top:-2px}
 .hero__tagline{margin:15px 0 25px; font-size:14px;letter-spacing:.36em;color:#fff8ef;}
@@ -153,7 +185,7 @@ a{text-decoration:none;color:inherit}
 .section-head h2{font-family:"Bodoni Moda",Georgia,serif;text-align:center;font-size:28px;font-weight:500;letter-spacing:.15em;margin:0 0 7px; text-shadow: 2px 2px 15px rgba(0,0,0,.8);}
 .section-head h3{text-align:center;font-size:12px;font-weight:500;letter-spacing:.15em;margin:0 0 7px; text-shadow: 2px 2px 15px rgba(0,0,0,.8);}
 .filters{display:flex;justify-content:center;gap:13px;margin-bottom:8px}
-.filters button{height:19px;min-width:88px;padding:0 13px;border:1px solid #d2c2b0;border-radius:12px;background:transparent;color:#4a3b30;font-size:7.5px;letter-spacing:.05em;text-transform:uppercase}
+.filters button{height:19px;min-width:88px;padding:0 13px;border:1px solid #d2c2b0;border-radius:12px;background:white;color:#4a3b30;font-size:7.5px;letter-spacing:.05em;text-transform:uppercase}
 .filters button.active{background:var(--brown-soft);border-color:var(--brown-soft);color:white}
 .product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px}
 .product-card{background:var(--card);overflow:hidden;border-radius:2px;min-width:0; border-radius:5px;}
