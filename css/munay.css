@@ -120,19 +120,19 @@ a{text-decoration:none;color:inherit}
 
 
 .munay-line .span-left {
-  background: linear-gradient(270deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
+  background: linear-gradient(270deg,rgb(213, 159, 93) 50%, rgba(46, 46, 39, 0.31) 100%);
 }
 
 .munay-line .span-right {
-    background: linear-gradient(90deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
+    background: linear-gradient(90deg,rgb(213, 159, 93) 50%, rgba(46, 46, 39, 0.31) 100%);
 }
 
 .munay-line2 .span-left {
-  background: linear-gradient(270deg,var(--brown-deep) 71%, rgba(46, 46, 39, 0.31) 100%);
+  background: linear-gradient(270deg,var(--brown-deep)50%, rgba(46, 46, 39, 0.31) 100%);
 }
 
 .munay-line2 .span-right {
-    background: linear-gradient(90deg,var(--brown-deep), rgba(46, 46, 39, 0.31) 100%);
+    background: linear-gradient(90deg,var(--brown-deep)50%, rgba(46, 46, 39, 0.31) 100%);
 }
 
 .munay-line b {
