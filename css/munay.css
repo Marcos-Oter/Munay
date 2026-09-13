@@ -2,7 +2,14 @@
    Desktop reference: 1536px wide screenshot.
    Fonts: Bodoni Moda + Montserrat.
 */
+
 :root{
+
+  --new-white:#f2e8de;
+  --new-brown-font:#41342c;
+  --new-brown-background:#372010;
+  --new-gold:#7f4c1f;
+
   --brown:#2d1709;
   --brown-deep:#241207;
   --brown-soft:#4a2a16;
@@ -15,6 +22,7 @@
   --line:#cdbba6;
   --max:1420px;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:Montserrat,Arial,sans-serif;font-size:14px}
@@ -25,23 +33,24 @@ a{text-decoration:none;color:inherit}
 .container{width:min(var(--max),calc(100% - 116px));margin-inline:auto}
 
 /* TOP BAR */
-.topbar{height:31px;background:var(--brown);color:#e9ddcf;border-bottom:1px solid rgba(199,154,82,.38)}
+.topbar{height:31px;background:var(--new-brown-background);color:#e9ddcf;border-bottom:1px solid rgba(199,154,82,.38)}
 .topbar__inner{height:100%;display:flex;justify-content:center;align-items:center;gap:9px;font-size:10px;letter-spacing:.09em}
 .topbar i{font-style:normal;color:var(--gold);font-size:12px}
 
 /* HEADER */
-.site-header{height:81px;background:var(--brown);color:#eee5db}
+/*.site-header{height:81px;background:var(--brown);color:#eee5db}*/
+.site-header{height:81px;background:var(--new-white);color:#eee5db}
 .header__inner{height:100%;display:grid;grid-template-columns:260px 1fr 150px;align-items:center}
-.brand{display:flex;flex-direction:column;color:var(--gold);line-height:1}
-.brand__name,.footer-logo,.hero__logo{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;letter-spacing:.17em}
+.brand{display:flex;flex-direction:column;color:var(--new-gold);line-height:1}
+.brand__name,.footer-logo,.hero__logo{font-family:"Libre Bodoni",Georgia,serif;font-weight:400;letter-spacing:.17em}
 .brand__name{font-size:35px; text-shadow: #000, 3px 3px 4px;}
 .brand__tagline{font-size:7px;letter-spacing:.27em;margin-top:8px;color:#b98b4a}
 .main-nav{display:flex;align-items:center;justify-content:center;gap:34px}
-.main-nav a{font-size:10px;font-weight:500;letter-spacing:.075em;text-transform:uppercase;padding:28px 0 12px;border-bottom:1px solid transparent}
+.main-nav a{color:var(--new-brown-font); font-size:10px;font-weight:500;letter-spacing:.075em;text-transform:uppercase;padding:28px 0 12px;border-bottom:1px solid transparent}
 .main-nav a:hover{border-bottom-color:var(--gold);color:#ffffff88}
-.main-nav a.is-active{border-bottom-color:var(--gold);color:#fff}
+.main-nav a.is-active{border-bottom-color:var(--gold);color:var(--new-brown-font)}
 .header-actions{display:flex;justify-content:flex-end;gap:22px}
-.icon-btn{position:relative;border:0;background:none;color:#e4d8ca;width:23px;height:25px;padding:0}
+.icon-btn{position:relative;border:0;background:none;color:var(--new-brown-font);width:23px;height:25px;padding:0}
 .ico{position:absolute;inset:2px 0 0 0;margin:auto;width:19px;height:19px;display:block}
 .ico-search{border:1.4px solid currentColor;border-radius:50%;width:17px;height:17px}
 .ico-search:after{content:"";position:absolute;width:8px;height:1.4px;background:currentColor;right:-6px;bottom:-3px;transform:rotate(48deg)}
@@ -52,16 +61,72 @@ a{text-decoration:none;color:inherit}
 .cart-btn b{position:absolute;right:-8px;top:-2px;background:var(--gold);color:var(--brown);border-radius:50%;font-size:8px;width:15px;height:15px;display:grid;place-items:center}
 
 /* HERO */
-.hero{height:330px;position:relative;overflow:hidden}
+.hero{height:330px;position:relative;overflow:hidden;}
 .hero__image{height:100%;object-fit:cover}
-.hero__content{position:absolute;left:19.8%;top:31px;width:41%;text-align:center}
-.hero__logo{font-size:101px; line-height:.92;color:#d2a25a;text-shadow: 4px 4px 30px rgba(0,0,0.8)}
-.hero__rule{width:115px;height:1px;background:#b68b4b;margin:12px auto 12px;position:relative}
+.hero__content{z-index: 2;position:absolute;left:19.8%;top:31px;width:41%;text-align:left;}
+.hero__content::before {
+    content: "";
+    position: absolute;
+
+    top: -25%;
+    left: 50%;
+
+    width: 600px;
+    height: 460px;
+
+    transform: translateX(-50%);
+
+    background: rgba(17, 8, 0, 0.5);
+
+    filter: blur(45px);
+
+    border-radius: 20%;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+.munay-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 5px;
+    color: #d59f5d;
+    transform: translateX(-10%);
+}
+.munay-line span {
+    width: 150px;
+    height: 1.25px;
+    
+}
+
+.munay-line .span-left {
+  background: linear-gradient(270deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
+}
+
+.munay-line .span-right {
+    background: linear-gradient(90deg,rgb(213, 159, 93) 71%, rgba(46, 46, 39, 0.31) 100%);
+}
+
+.munay-line b {
+    font-size: 13px;
+    font-weight: 900;
+    font-family: "Bodoni Moda",Georgia,serif;
+
+    color: #d59f5d;
+}
+
+.hero__logo{font-family: "Bodoni Moda",Georgia,serif; font-size:101px; line-height:.92;color:#d59f5d;text-shadow: -4px 4px 15px rgba(2, 2, 7, 0.753)}
+.hero__rule{width:115px;height:1px;background:#b68b4b;margin:8px auto 8px;position:relative}
 .hero__rule:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:var(--gold);right:-15px;top:-2px}
-.hero__tagline{font-size:14px;letter-spacing:.36em;color:#d2ab6d}
-.hero h1{margin:25px 0 21px;color:#fff8ef;font-size:24px;font-weight:400;letter-spacing:.28em}
+.hero__tagline{margin:15px 0 25px; font-size:14px;letter-spacing:.36em;color:#fff8ef;}
+.hero h1{margin:0 0 16px; color:#fff8ef;font-size:18px;font-weight:400;letter-spacing:.28em;}
+.hero__background{position:relative; width: 100%; height: 100%; background: #0000004b; filter: blur(54px);} 
 .btn{display:inline-flex;align-items:center;justify-content:center;text-transform:uppercase;letter-spacing:.06em;min-height:46px;padding:0 35px;font-size:16px}
-.btn--gold{background:rgba(45,23,9,.84);border:1px solid var(--gold);color:var(--gold-light);border-radius: 2px;}
+.btn--gold{background:rgba(45,23,9,.84);border:1px solid var(--gold);color:var(--gold-light);border-radius: 15px;}
 .btn--outline{border:1px solid #65513e;color:#3a281b;background:transparent;min-height:39px;font-size:12px}
 
 /* BENEFITS */
@@ -77,13 +142,21 @@ a{text-decoration:none;color:inherit}
 .benefits small{display:block;margin-top:4px;font-size:8.5px;color:#d9c8b6}
 
 /* PRODUCTS */
+/* Plantas */
+.planta { position: absolute; z-index: -111;pointer-events: none;user-select: none;/* Evita que la imagen deforme su proporción */height: auto;}
+/* Planta izquierda*/
+.planta-izquierda {left: 0;top: 0;width: clamp(80px, 5vw, 280px);}
+/* Planta derecha */
+.planta-derecha {right: 0; top: 0; width: clamp(80px, 5vw, 280px);}
+
 .products{background:#fbf6f0;padding:13px 0 7px}
 .section-head h2{font-family:"Bodoni Moda",Georgia,serif;text-align:center;font-size:28px;font-weight:500;letter-spacing:.15em;margin:0 0 7px; text-shadow: 2px 2px 15px rgba(0,0,0,.8);}
+.section-head h3{text-align:center;font-size:12px;font-weight:500;letter-spacing:.15em;margin:0 0 7px; text-shadow: 2px 2px 15px rgba(0,0,0,.8);}
 .filters{display:flex;justify-content:center;gap:13px;margin-bottom:8px}
 .filters button{height:19px;min-width:88px;padding:0 13px;border:1px solid #d2c2b0;border-radius:12px;background:transparent;color:#4a3b30;font-size:7.5px;letter-spacing:.05em;text-transform:uppercase}
 .filters button.active{background:var(--brown-soft);border-color:var(--brown-soft);color:white}
 .product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px}
-.product-card{background:var(--card);overflow:hidden;border-radius:2px;min-width:0}
+.product-card{background:var(--card);overflow:hidden;border-radius:2px;min-width:0; border-radius:5px;}
 .product-card__media{height:188px;position:relative;overflow:hidden}
 .product-card__media img{height:100%;object-fit:cover}
 .product-card__media span{position:absolute;left:11px;top:9px;padding:4px 8px;border-radius:3px;background:var(--brown-soft);color:#fff;font-size:7px}
@@ -154,9 +227,11 @@ a{text-decoration:none;color:inherit}
   .header-actions{gap:18px}
   .hero{height:410px}
   .hero__image{object-position:55% center}
-  .hero__content{left:5%;width:90%;top:48px}
+  .hero__content{left:5%;width:90%;top:48px;text-align: center;}
   .hero__logo{font-size:70px}
   .hero__tagline{font-size:10px}
+  .munay-line {
+    transform: translateX(0);}
   .hero h1{font-size:18px;margin-top:23px}
   .benefits{height:auto}
   .benefits__grid{grid-template-columns:1fr 1fr}
