@@ -158,7 +158,7 @@ a{text-decoration:none;color:inherit}
 .hero h1{margin:0 0 16px; color:#fff8ef;font-size:18px;font-weight:400;letter-spacing:.28em;}
 .hero__background{position:relative; width: 100%; height: 100%; background: #0000004b; filter: blur(54px);} 
 .btn{display:inline-flex;align-items:center;justify-content:center;text-transform:uppercase;letter-spacing:.06em;min-height:46px;padding:0 35px;font-size:16px}
-.btn--gold{background:rgba(45,23,9,.84);border:1px solid var(--gold);color:var(--gold-light);border-radius: 15px;}
+.btn--gold{background:rgba(45,23,9,.84);border:1px solid var(--gold);color:var(--gold-light);border-radius: 25px;}
 .btn--outline{border:1px solid #65513e;color:#3a281b;background:transparent;min-height:39px;font-size:12px}
 
 /* BENEFITS */
@@ -183,7 +183,7 @@ a{text-decoration:none;color:inherit}
 .section-head h2{font-family:"Bodoni Moda",Georgia,serif;text-align:center;font-size:28px;font-weight:500;letter-spacing:.15em;margin:0 0 1px; text-shadow: 2px 2px 15px rgba(0,0,0,.8); color: var(--brown-soft);}
 .section-head h3{text-align:center;font-size:12px;font-weight:500;letter-spacing:.15em;margin:0 0 7px; text-shadow: 2px 2px 15px rgba(0,0,0,.8); color: var(--brown-soft);}
 .filters{display:flex;justify-content:center;gap:13px;margin-bottom:15px}
-.filters button{height:19px;min-width:88px;padding:0 13px;;border:1px solid #d2c2b0;border-radius:12px;background:white;color:#4a3b30;font-size:7.5px;letter-spacing:.05em;text-transform:uppercase}
+.filters button{display: flex;align-items: center; justify-content: center; height:19px; min-width:88px; padding:10px 13px;;border:1px solid #d2c2b0;border-radius:12px;background:white;color:#4a3b30;font-size:7.5px;letter-spacing:.05em;text-transform:uppercase}
 .filters button.active{background:var(--brown-soft);border-color:var(--brown-soft);color:white}
 .product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px}
 .product-card{background:var(--card);overflow:hidden;border-radius:2px;min-width:0; border-radius:5px;}
@@ -279,7 +279,7 @@ a{text-decoration:none;color:inherit}
 @media(max-width:500px){
   .hero{height:440px}
   .hero__image{object-position:60% center}
-  .hero__logo{font-size:75px}
+  .hero__logo{font-size:75px;font-weight: 500;}
   .hero__tagline{font-size:12px;letter-spacing:.27em}
   .hero h1{font-size:18px;letter-spacing:.20em}
   .btn--gold{font-size:13px;padding:0 25px}
